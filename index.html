@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GovScheme India | Official Information Portal</title>
+
+<style>
+:root{
+  --gov-blue:#0a3d62;
+  --gov-green:#1e8449;
+  --gov-orange:#d35400;
+  --light:#f4f6f9;
+  --dark:#1c2833;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--light);
+  color:#222;
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,var(--gov-blue),#154360);
+  color:#fff;
+  padding:40px 20px;
+  text-align:center;
+}
+header h1{
+  margin:0;
+  font-size:38px;
+  letter-spacing:1px;
+}
+header p{
+  margin-top:10px;
+  font-size:18px;
+  opacity:0.95;
+}
+
+/* NAV */
+nav{
+  background:#ffffff;
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:15px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+nav button{
+  background:none;
+  border:none;
+  font-size:17px;
+  font-weight:600;
+  color:var(--gov-blue);
+  cursor:pointer;
+}
+nav button:hover{
+  color:var(--gov-orange);
+}
+
+/* SECTIONS */
+.section{
+  display:none;
+  max-width:1100px;
+  margin:40px auto;
+  background:#fff;
+  padding:40px;
+  border-radius:14px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+.section h2{
+  margin-top:0;
+  font-size:30px;
+  color:var(--gov-blue);
+}
+
+/* HERO INFO */
+.hero-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:30px;
+}
+.hero-box{
+  background:#fdfefe;
+  border-left:6px solid var(--gov-green);
+  padding:25px;
+  border-radius:10px;
+  font-size:17px;
+}
+
+/* SCHEME CARDS */
+.scheme{
+  background:#f8f9f9;
+  padding:25px;
+  margin-bottom:25px;
+  border-radius:12px;
+  border:1px solid #e5e7e9;
+}
+.scheme b{
+  font-size:20px;
+}
+.apply-btn{
+  margin-top:15px;
+  padding:14px 22px;
+  background:var(--gov-orange);
+  color:white;
+  border:none;
+  font-size:16px;
+  font-weight:bold;
+  border-radius:8px;
+  cursor:pointer;
+}
+.apply-btn:hover{
+  opacity:0.9;
+}
+
+/* FORM */
+label{
+  font-weight:600;
+  display:block;
+  margin-top:20px;
+}
+input,select{
+  width:100%;
+  padding:14px;
+  font-size:16px;
+  margin-top:8px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+.main-btn{
+  margin-top:25px;
+  padding:15px;
+  width:100%;
+  font-size:18px;
+  background:var(--gov-green);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:#fff;
+  padding:30px;
+  text-align:center;
+  margin-top:60px;
+  font-size:15px;
+}
+footer small{
+  opacity:0.85;
+}
+
+/* TRUST BAR */
+.trust{
+  background:#eaf2f8;
+  padding:20px;
+  text-align:center;
+  font-size:16px;
+  border-top:3px solid var(--gov-blue);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>GovScheme India 🇮🇳</h1>
+  <p>Official Government Schemes Information & Apply Gateway</p>
+</header>
+
+<nav>
+  <button onclick="show('home')">Home</button>
+  <button onclick="show('schemes')">Schemes</button>
+  <button onclick="show('apply')">Apply Help</button>
+  <button onclick="show('states')">State Portals</button>
+</nav>
+
+<div class="trust">
+  ⚠️ Final Apply hamesha 
+  <a href="https://www.india.gov.in" target="_blank">
+    Official Government Website
+  </a> par hi hota hai
+</div>
+
+<!-- HOME -->
+<div id="home" class="section">
+  <h2>Public Service Information Portal</h2>
+  <div class="hero-grid">
+    <div class="hero-box">✔ Verified Government Scheme Information</div>
+    <div class="hero-box">✔ Direct Official Apply Links</div>
+    <div class="hero-box">✔ Hindi Guidance for Citizens</div>
+    <div class="hero-box">✔ No Agent • No Fees • No Fraud</div>
+  </div>
+</div>
+
+<!-- SCHEMES -->
+<div id="schemes" class="section">
+  <h2>Popular Government Schemes</h2>
+
+  <div class="scheme">
+    <b>PM Kisan Samman Nidhi</b><br>
+    ₹6000 per year for farmers<br>
+    <button class="apply-btn" onclick="window.open('https://pmkisan.gov.in','_blank')">
+      Apply on Official Website
+    </button>
+  </div>
+
+  <div class="scheme">
+    <b>Ayushman Bharat Yojana</b><br>
+    ₹5 Lakh free medical treatment<br>
+    <button class="apply-btn" onclick="window.open('https://pmjay.gov.in','_blank')">
+      Apply on Official Website
+    </button>
+  </div>
+
+  <div class="scheme">
+    <b>Scholarship Portal</b><br>
+    Central & State Scholarships<br>
+    <button class="apply-btn" onclick="window.open('https://scholarships.gov.in','_blank')">
+      Apply on Official Website
+    </button>
+  </div>
+</div>
+
+<!-- APPLY -->
+<div id="apply" class="section">
+  <h2>Apply Assistance (Help Form)</h2>
+  <label>Full Name</label>
+  <input type="text">
+
+  <label>Mobile Number</label>
+  <input type="number">
+
+  <label>Select Scheme</label>
+  <select>
+    <option>PM Kisan</option>
+    <option>Ayushman Bharat</option>
+    <option>Scholarship</option>
+    <option>Pension</option>
+  </select>
+
+  <button class="main-btn" onclick="alert('Details saved. Please apply on official website.')">
+    Save Details
+  </button>
+</div>
+
+<!-- STATES -->
+<div id="states" class="section">
+  <h2>State Government Official Portals</h2>
+  <ul>
+    <li><a href="https://up.gov.in" target="_blank">Uttar Pradesh</a></li>
+    <li><a href="https://state.bihar.gov.in" target="_blank">Bihar</a></li>
+    <li><a href="https://maharashtra.gov.in" target="_blank">Maharashtra</a></li>
+    <li><a href="https://rajasthan.gov.in" target="_blank">Rajasthan</a></li>
+  </ul>
+</div>
+
+<footer>
+  © 2026 GovScheme India<br>
+  Owner: <b>Rehan Ahmad</b><br>
+  <small>This is a public service information platform. Not an official government website.</small>
+</footer>
+
+<script>
+function show(id){
+  document.querySelectorAll('.section').forEach(s=>s.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+show('home');
+</script>
+
+</body>
+</html>
+
+
+
